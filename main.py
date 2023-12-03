@@ -22,6 +22,11 @@ pygame.display.set_caption("SnakeByShreyas")
 bgimage = pygame.image.load('download.jpg')
 bgimage = pygame.transform.scale(bgimage,(GAME_WIDTH,GAME_HEIGHT)).convert_alpha()
 
+bgimage1 = pygame.image.load('snake-game.jpg')
+bgimage1 = pygame.transform.scale(bgimage1,(GAME_WIDTH,GAME_HEIGHT)).convert_alpha()
+
+bgimage2 = pygame.image.load('razor.jpg')
+bgimage2 = pygame.transform.scale(bgimage2,(GAME_WIDTH,GAME_HEIGHT)).convert_alpha()
 
 #initialized the clock
 clock = pygame.time.Clock()
@@ -39,6 +44,7 @@ def welcome():
     exit_game = False
     while not exit_game:
         window.fill(white)
+        window.blit(bgimage1,(0,0))
         text('Welcome to snake',black,180,200)
         text('press SPACE to play',black,170,250)
         for events in pygame.event.get():
@@ -84,7 +90,9 @@ def gameloop():
     while not exit_game:
         if game_over:
             window.fill(white)
-            text('game over, press enter to continue',red,0,200)
+            window.blit(bgimage2,(0,0))
+            text('game over',red,250,200)
+            text('press enter to continue',red,150,250)
             for events in pygame.event.get():
                 if events.type == pygame.QUIT:
                     exit_game = True
