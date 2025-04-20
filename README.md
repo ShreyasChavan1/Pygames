@@ -26,6 +26,7 @@ A classic **Snake Game** built using **Python** and **Pygame**. Simple, fun, and
 ## 📦 Requirements
 
 Make sure you have Python installed, then install the required library:
+```
 
 ```bash
 pip install pygame
@@ -83,6 +84,3 @@ For feedback, ideas, or bugs:
 - Email: shreyas.c@somaiya.edu
 ```
 
----
-
-Let me know if your snake game has extra features like sound effects, menus, or different levels—happy to update this to match!
